@@ -58,7 +58,7 @@ $resultado =$sql->fetchAll(PDO::FETCH_ASSOC);
                   
                    
                   <li> <a href="/checkout.php" class="btn btn-primary "><i class="fa fa-shopping-cart"></i> Carrito<span id="num_cart" class="badge bg-secondary"><?php echo $num_cart; ?></span></a></li>
-                 
+                <li><a  href="/login.php">Administrador</a></li>
                   <?php if(isset($_SESSION['user_id'])){ ?>
                  
                    <li><div class="dropdown">

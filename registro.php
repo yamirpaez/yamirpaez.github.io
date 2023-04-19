@@ -23,6 +23,7 @@ if(!empty($_POST)){
 
    if(esNulo([$nombres, $apellidos, $email, $telefono, $dni,  $usuario,$password,$repassword])){
       $errors[]="Debe llenar todos los campos";
+      
    }
 
    if(!esEmail($email)){

@@ -121,7 +121,7 @@ if(!empty($_POST)){
                 <button type="submit" class="btn btn-primary">Ingresar</button>
               </div>
               <hr>
-              <div class="col-12">¿No tiene cuenta?<a href="registro.php">Registrate aqui</a>
+
             </div>
 
         </form>

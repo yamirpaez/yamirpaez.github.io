@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fresh Yam</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-pZjDv9X4F4vl+xG6l/7FidHiMCXPvP8WfN3KjV/TB13pGSK7V5iWJX8hKicNJzTC" crossorigin="anonymous"></script>
 
@@ -26,11 +26,30 @@
         border-radius: 5px;
         padding: 5px 10px;
     }
+
+    .cerrar-sesion {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cerrar-sesion:hover {
+  background-color: darkred;
+  box-shadow: 0px 0px 5px #888888;
+}
+
+
 </style>
 
 <body style="background-color: #fff8dc;">
     <br>
     <div class="container mt-5">
+    <a class="btn cerrar-sesion" href="/index.php">Cerrar Sesion</a><br>
+    <br>
     <form class="form-inline justify-content-center mb-3" action="consultar.php" method="post">
         <div class="input-group">
             <input type="text" class="form-control" name="buscar" placeholder="Buscar">
@@ -46,6 +65,7 @@
     <div class="table-responsive">
         <table class="table table-hover table-bordered">
             <thead class="thead-dark">
+                
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
@@ -55,6 +75,7 @@
                     <th>Activo</th>
                     <th>Opciones</th>
                 </tr>
+                
                 <?php
                 $cnx = mysqli_connect("localhost", "root", "", "tiendaonline");
                 $sql = "SELECT id, nombre, descripcion, precio, descuento, activo FROM productos ORDER BY id desc";
@@ -76,6 +97,8 @@
                     <?php
                 }
                 ?>
+                
+                
             </thead>
         </table>
     </div>
